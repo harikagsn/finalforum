@@ -5,11 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-admin=User.new({ email: 'harikagoruganthu13@gmail.com',
-               password: 'harika', password_confirmation: 'harika'})
 
-    admin.toggle!(:admin)
-    
+    User.create!(email: 'harikagoruganthu13@gmail.com',
+                   password: 'harika', password_confirmation: 'harika', admin: true)
     if admin.valid?
       admin.save()
 
