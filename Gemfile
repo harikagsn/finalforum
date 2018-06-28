@@ -9,10 +9,10 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
-
+gem 'sqlite3'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -33,11 +33,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'materialize-sass'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'bulma-rails', '~> 0.6.2'
+
 gem 'simple_form', '~> 3.5'
 gem 'devise', '~> 4.4', '>= 4.4.1'
-gem 'gravatar_image_tag', '~> 1.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'gravatar_image_tag', '~> 1.2'
 gem 'rolify', '~> 5.2'
 gem 'cancancan', '~> 2.1', '>= 2.1.3'
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
@@ -47,6 +47,7 @@ gem 'coderay', '~> 1.1', '>= 1.1.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'rspec-rails', '~> 3.7'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
