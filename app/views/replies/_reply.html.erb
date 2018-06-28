@@ -13,7 +13,7 @@
           <%= markdown(reply.reply) %>
         </p>
       </div> </div>
-      <% if has_role?(:admin) %>
+      <% if current_user.try(:admin?) %>
 
         <div class="level-left">
           <a class="level-item">

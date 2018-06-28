@@ -1,6 +1,6 @@
 <h3 class="title is-2">Channels</h3>
 
-<% if has_role?(:admin) %>
+<% if current_user.try(:admin?) %>
 <div class="level">
   <div class="level-left"></div>
   <div class="level-right">

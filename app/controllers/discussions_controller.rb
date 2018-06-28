@@ -2,6 +2,7 @@ class DiscussionsController < ApplicationController
   before_action :set_discussion, only: [:show, :edit, :update, :destroy]
   before_action :find_channels, only: [:index, :show, :new, :edit]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :admin_user,     only: :destroy
 
   def index
     @discussions = Discussion.all.order('created_at desc')
@@ -48,6 +49,9 @@ class DiscussionsController < ApplicationController
       end
     end
   end
+  def admin_user
+        redirect_to(root_url) unless current_user.try(:admin?)
+      end
 
   def destroy
     @discussion.destroy

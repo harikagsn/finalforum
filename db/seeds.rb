@@ -8,13 +8,4 @@
 
     User.create!(email: 'harikagoruganthu13@gmail.com',
                    password: 'harika', password_confirmation: 'harika', admin: true)
-    if admin.valid?
-      admin.save()
-
-    elsif admin.errors.any?
-      admin.errors.full_messages.each do |msg|
-        puts msg
-      end
-    else
-      puts "****NOT VALID****"
-    end
+    
